@@ -7,9 +7,9 @@ using ManagingApp.WebApi.Entities.Interfaces;
 
 namespace ManagingApp.WebApi.Entities
 {
-    public class MateriaPrima : IProduto
+    public class MateriaPrima : IEntity, IProduto
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Descricao { get; set; }
         public double Valor { get; set; }
         public int Estoque { get; set; }
@@ -17,7 +17,11 @@ namespace ManagingApp.WebApi.Entities
         public UnidadeMedida UnidadeMedida { get; set; }
         public ICollection<Fornecedor> Fornecedores { get; set; } = new List<Fornecedor>();
 
-        public MateriaPrima(int id, string descricao, double valor, int estoque, AgrupamentoProduto grupo, UnidadeMedida unidadeMedida)
+        protected MateriaPrima()
+        {
+        }
+
+        public MateriaPrima(long id, string descricao, double valor, int estoque, AgrupamentoProduto grupo, UnidadeMedida unidadeMedida)
         {
             Id = id;
             Descricao = descricao;

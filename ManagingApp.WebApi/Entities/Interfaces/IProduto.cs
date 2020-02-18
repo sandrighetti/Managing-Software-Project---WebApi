@@ -2,7 +2,7 @@
 
 namespace ManagingApp.WebApi.Entities.Interfaces
 {
-    interface IProduto
+    public interface IProduto
     {
         string Descricao { get; set; }
         double Valor { get; set; }
@@ -15,7 +15,7 @@ namespace ManagingApp.WebApi.Entities.Interfaces
             Estoque += quantidade;
         }
 
-        public void SubtractStock (int quantidade)
+        public void SubtractStock(int quantidade)
         {
             Estoque -= quantidade;
         }
