@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ManagingApp.WebApi.Entities.Interfaces;
-
-namespace ManagingApp.WebApi.Entities
+﻿namespace ManagingApp.WebApi.Entities
 {
-    public class Fornecedor : IEntity
+    public class Fornecedor : BaseEntity
     {
-        public long Id { get; set; }
         public string Nome { get; set; }
         public string Endereco { get; set; }
         public string Fone { get; set; }

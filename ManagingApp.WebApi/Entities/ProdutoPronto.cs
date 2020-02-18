@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ManagingApp.WebApi.Enums;
+﻿using ManagingApp.WebApi.Enums;
 using ManagingApp.WebApi.Entities.Interfaces;
 
 namespace ManagingApp.WebApi.Entities
 {
-    public class ProdutoPronto : IEntity, IProduto
+    public class ProdutoPronto : BaseEntity, IProduto
     {
-        public long Id { get; set; }
         public string Descricao { get; set; }
         public double Valor { get; set; }
         public int Estoque { get; set; }
