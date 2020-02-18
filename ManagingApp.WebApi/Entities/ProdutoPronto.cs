@@ -7,15 +7,15 @@ using ManagingApp.WebApi.Entities.Interfaces;
 
 namespace ManagingApp.WebApi.Entities
 {
-    public class ProdutoPronto : IProduto
+    public class ProdutoPronto : BaseEntity, IProduto
     {
-        public int Id { get; set; }
         public string Descricao { get; set; }
         public double Valor { get; set; }
         public int Estoque { get; set; }
         public AgrupamentoProduto Grupo { get; set; }
         public UnidadeMedida UnidadeMedida { get; set; }
 
+        protected ProdutoPronto() { }
         public ProdutoPronto(int id, string descricao, double valor, int estoque, AgrupamentoProduto grupo, UnidadeMedida unidadeMedida)
         {
             Id = id;
@@ -24,6 +24,7 @@ namespace ManagingApp.WebApi.Entities
             Estoque = estoque;
             Grupo = grupo;
             UnidadeMedida = unidadeMedida;
+            
         }
     }
 }

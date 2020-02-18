@@ -7,9 +7,8 @@ using ManagingApp.WebApi.Entities.Interfaces;
 
 namespace ManagingApp.WebApi.Entities
 {
-    public class MateriaPrima : IProduto
+    public class MateriaPrima : BaseEntity, IProduto
     {
-        public int Id { get; set; }
         public string Descricao { get; set; }
         public double Valor { get; set; }
         public int Estoque { get; set; }
