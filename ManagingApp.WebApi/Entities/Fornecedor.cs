@@ -11,5 +11,13 @@ namespace ManagingApp.WebApi.Entities
         public string Endereco { get; set; }
         public string Fone { get; set; }
         public string Contato { get; set; }
+
+        public Fornecedor(string nome, string endereco, string fone, string contato)
+        {
+            Nome = nome;
+            Endereco = endereco;
+            Fone = fone;
+            Contato = contato;
+        }
     }
 }
